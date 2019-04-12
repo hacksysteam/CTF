@@ -11,11 +11,11 @@ unsigned char shellcode[] = \
 
 void main()
 {
-	printf("Shellcode: %p\n", &shellcode);
-	printf("Size of shellcode: %ld bytes\n", sizeof(shellcode));
-	printf("Press any key to execute...\n");
+    printf("Shellcode: %p\n", &shellcode);
+    printf("Size of shellcode: %ld bytes\n", sizeof(shellcode));
+    printf("Press any key to execute...\n");
 
-	getchar();
+    getchar();
 
     int (*ret)() = (int(*)())shellcode;
     ret();
